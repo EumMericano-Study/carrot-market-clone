@@ -1,5 +1,5 @@
 import { useState } from "react";
-import GithubIcon from "../components/icons/github";
+import { GithubIcon, TwitterIcon } from "../components/icons";
 
 export default function Enter() {
   const [method, setMethod] = useState<"email" | "phone">("email");
@@ -42,7 +42,9 @@ export default function Enter() {
           </div>
         </div>
         <div>
-          <button></button>
+          <button>
+            <TwitterIcon />
+          </button>
           <button>
             <GithubIcon />
           </button>
