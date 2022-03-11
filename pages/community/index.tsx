@@ -7,7 +7,7 @@ export default function Community() {
         .fill("")
         .map((_, index) => (
           <div key={index} className="flex items-start flex-col cursor-pointer">
-            <span className="fled items-center bg-gray-100 text-sm text-gray-800 font-medium px-2.5 py-0.5 rounded-full">
+            <span className="flex items-center bg-gray-100 text-sm text-gray-800 font-medium px-2.5 py-0.5 rounded-full">
               동네 질문
             </span>
             <div className="text-gray-700 mt-2">
