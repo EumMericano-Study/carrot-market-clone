@@ -1,6 +1,8 @@
 export { default as HeartIcon } from "./heart";
 export { default as ChatBubbleIcon } from "./chatBubble";
-export { default as Plus } from "./plus";
+export { default as PlusIcon } from "./plus";
+export { default as CheckIcon } from "./check";
+export { default as PencilIcon } from "./pencil";
 
 export { default as AddPhotoIcon } from "./addPhoto";
 
