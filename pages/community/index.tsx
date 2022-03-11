@@ -1,4 +1,4 @@
-import { ChatBubbleIcon, CheckIcon } from "../../components/icons";
+import { ChatBubbleIcon, CheckIcon, PencilIcon } from "../../components/icons";
 
 export default function Community() {
   return (
@@ -23,7 +23,9 @@ export default function Community() {
           </span>
         </div>
       </div>
-      <button></button>
+      <button>
+        <PencilIcon />
+      </button>
     </div>
   );
 }
