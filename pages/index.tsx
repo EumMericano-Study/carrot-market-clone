@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { HeartIcon, ChatBubbleIcon, Plus } from "../components/icons";
+import { HeartIcon, ChatBubbleIcon, PlusIcon } from "../components/icons";
 
 const Home: NextPage = () => {
   return (
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           </div>
         ))}
       <button className="fixed bottom-24 right-10 bg-orange-500 text-white transition-colors cursor-pointer shadow-xl p-4 rounded-full hover:bg-orange-600">
-        <Plus className="w-7 h-7" />
+        <PlusIcon className="w-7 h-7" />
       </button>
     </div>
   );
