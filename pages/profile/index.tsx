@@ -3,7 +3,7 @@ import {
   HeartIcon,
   ShoppingIcon,
   StarIcon,
-} from "../components/icons";
+} from "../../components/icons";
 
 export default function Profile() {
   return (
