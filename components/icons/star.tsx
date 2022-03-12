@@ -8,7 +8,7 @@ export default function Heart(props: Props) {
   return (
     <svg
       className={className}
-      fill="none"
+      fill={fill}
       stroke="currentColor"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
