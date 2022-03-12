@@ -4,9 +4,12 @@ export default function Upload() {
   return (
     <div className="px-4 py-16">
       <div>
-        <label className="w-full h-48 flex justify-center items-center text-gray-600 transition-colors cursor-pointer border-2 border-dashed border-gray-300 rounded-md hover:text-orange-500 hover:border-orange-500">
+        <label
+          htmlFor="photo"
+          className="w-full h-48 flex justify-center items-center text-gray-600 transition-colors cursor-pointer border-2 border-dashed border-gray-300 rounded-md hover:text-orange-500 hover:border-orange-500"
+        >
           <AddPhotoIcon />
-          <input type="file" className="hidden" />
+          <input id="photo" type="file" accept="image/*" className="hidden" />
         </label>
       </div>
       <div className="py-5">
