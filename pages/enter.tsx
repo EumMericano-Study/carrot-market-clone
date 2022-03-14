@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { GithubIcon, TwitterIcon } from "../components/icons";
-
-function cls(...className: string[]) {
-  return className.join(" ");
-}
+import { cls } from "../libs/utils";
 
 export default function Enter() {
   const [method, setMethod] = useState<"email" | "phone">("email");
