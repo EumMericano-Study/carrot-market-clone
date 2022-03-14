@@ -33,7 +33,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         ))}
-      <button className="fixed bottom-24 right-10 bg-orange-500 text-white transition-colors cursor-pointer shadow-xl p-4 rounded-full hover:bg-orange-600">
+      <button className="fixed bottom-24 right-10 bg-orange-500 text-white transition-colors cursor-pointer shadow-xl p-4 border-transparent  rounded-full hover:bg-orange-600">
         <PlusIcon className="w-7 h-7" />
       </button>
     </div>
