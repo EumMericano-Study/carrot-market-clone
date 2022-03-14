@@ -10,5 +10,7 @@ export { default as CartIcon } from "./cart";
 export { default as ShoppingIcon } from "./shopping";
 export { default as StarIcon } from "./star";
 
+export { default as VideoIcon } from "./video";
+
 export { default as GithubIcon } from "./github";
 export { default as TwitterIcon } from "./twitter";
