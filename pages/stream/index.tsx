@@ -1,6 +1,6 @@
 import { VideoIcon } from "../../components/icons";
 
-export default function Live() {
+export default function Stream() {
   return (
     <div className="py-10 space-y-4 divide-y-2">
       {Array(5)
