@@ -1,4 +1,4 @@
-import { VideoIcon } from "../components/icons";
+import { VideoIcon } from "../../components/icons";
 
 export default function Live() {
   return (
