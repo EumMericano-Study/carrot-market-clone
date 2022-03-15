@@ -1,4 +1,4 @@
-import CircleButton from "../../components/buttons/circle";
+import { CircleButton } from "../../components/buttons";
 import { VideoIcon } from "../../components/icons";
 import Layout from "../../components/layout";
 

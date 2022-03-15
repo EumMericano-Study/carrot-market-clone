@@ -1,5 +1,5 @@
 import Link from "next/link";
-import CircleButton from "../../components/buttons/circle";
+import { CircleButton } from "../../components/buttons";
 import { ChatBubbleIcon, CheckIcon, PencilIcon } from "../../components/icons";
 import Layout from "../../components/layout";
 
