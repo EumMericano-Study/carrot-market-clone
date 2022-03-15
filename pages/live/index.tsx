@@ -4,7 +4,7 @@ import Layout from "../../components/layout";
 export default function Live() {
   return (
     <Layout hasTabBar title="라이브">
-      <div className="py-10 space-y-4 divide-y-2">
+      <div className="space-y-4 divide-y-2">
         {Array(5)
           .fill("")
           .map((_, index) => (

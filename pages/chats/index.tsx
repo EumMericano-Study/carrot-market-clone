@@ -3,7 +3,7 @@ import Layout from "../../components/layout";
 export default function Chats() {
   return (
     <Layout hasTabBar title="채팅">
-      <div className="py-10 divide-y">
+      <div className="divide-y">
         {Array(6)
           .fill("")
           .map((_, index) => (

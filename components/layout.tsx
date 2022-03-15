@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { cls } from "../libs/utils";
 import {
   ChatBubbleIcon,
@@ -30,26 +31,36 @@ export default function Layout({
       </div>
       {hasTabBar && (
         <nav className="w-full max-w-lg fixed bottom-0 flex justify-between items-center bg-white text-gray-800 border-t px-10 pb-5 pt-3">
-          <div className="flex flex-col items-center space-y-2">
-            <HomeIcon />
-            <span>Home</span>
-          </div>
-          <div className="flex flex-col items-center space-y-2">
-            <NewsIcon />
-            <span>Town</span>
-          </div>
-          <div className="flex flex-col items-center space-y-2">
-            <ChatBubbleIcon className="w-6 h-6" />
-            <span>Chat</span>
-          </div>
-          <div className="flex flex-col items-center space-y-2">
-            <VideoIcon />
-            <span>Live</span>
-          </div>
-          <div className="flex flex-col items-center space-y-2">
-            <UserIcon />
-            <span>Profile</span>
-          </div>
+          <Link href="/">
+            <a className="flex flex-col items-center space-y-2">
+              <HomeIcon />
+              <span>Home</span>
+            </a>
+          </Link>
+          <Link href="/community">
+            <a className="flex flex-col items-center space-y-2">
+              <NewsIcon />
+              <span>Town</span>
+            </a>
+          </Link>
+          <Link href="/chats">
+            <a className="flex flex-col items-center space-y-2">
+              <ChatBubbleIcon className="w-6 h-6" />
+              <span>Chat</span>
+            </a>
+          </Link>
+          <Link href="/live">
+            <a className="flex flex-col items-center space-y-2">
+              <VideoIcon />
+              <span>Live</span>
+            </a>
+          </Link>
+          <Link href="/profile">
+            <a className="flex flex-col items-center space-y-2">
+              <UserIcon />
+              <span>Profile</span>
+            </a>
+          </Link>
         </nav>
       )}
     </div>

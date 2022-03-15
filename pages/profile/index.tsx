@@ -9,7 +9,7 @@ import Layout from "../../components/layout";
 export default function Profile() {
   return (
     <Layout hasTabBar title="나의 캐럿">
-      <div className="px-4 py-10">
+      <div className="px-4">
         <div className="flex items-center space-x-3">
           <div className="w-16 h-16 bg-slate-300 rounded-full" />
           <div className="flex flex-col">

@@ -4,7 +4,7 @@ import Layout from "../../components/layout";
 export default function Community() {
   return (
     <Layout hasTabBar title="동내생활">
-      <div className="px-4 py-16 space-y-8">
+      <div className="px-4 space-y-4">
         {Array(5)
           .fill("")
           .map((_, index) => (
