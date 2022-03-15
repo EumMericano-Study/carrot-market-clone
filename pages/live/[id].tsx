@@ -1,6 +1,6 @@
 import { VideoIcon } from "../../components/icons";
 
-export default function StreamDetail() {
+export default function LiveDetail() {
   return (
     <div className="px-4 py-10 space-y-4">
       <div className="w-full aspect-video bg-slate-300 shadow-sm rounded-md" />
