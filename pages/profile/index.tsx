@@ -1,4 +1,4 @@
-import CircleButton from "../../components/buttons/circleButton";
+import CircleButton from "../../components/buttons/circle";
 import {
   CartIcon,
   HeartIcon,

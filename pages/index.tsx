@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import CircleButton from "../components/buttons/circleButton";
+import CircleButton from "../components/buttons/circle";
 import { HeartIcon, ChatBubbleIcon, PlusIcon } from "../components/icons";
 import Layout from "../components/layout";
 
