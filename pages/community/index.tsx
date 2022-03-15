@@ -1,3 +1,4 @@
+import CircleButton from "../../components/buttons/circleButton";
 import { ChatBubbleIcon, CheckIcon, PencilIcon } from "../../components/icons";
 import Layout from "../../components/layout";
 
@@ -35,9 +36,9 @@ export default function Community() {
               </div>
             </div>
           ))}
-        <button className="fixed bottom-24 right-10 bg-orange-500 text-white transition-colors cursor-pointer shadow-xl p-4 rounded-full hover:bg-orange-600">
+        <CircleButton className="fixed bottom-24 right-10">
           <PencilIcon />
-        </button>
+        </CircleButton>
       </div>
     </Layout>
   );

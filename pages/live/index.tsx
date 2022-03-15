@@ -1,10 +1,11 @@
+import CircleButton from "../../components/buttons/circleButton";
 import { VideoIcon } from "../../components/icons";
 import Layout from "../../components/layout";
 
 export default function Live() {
   return (
     <Layout hasTabBar title="라이브">
-      <div className="space-y-4 divide-y-2">
+      <div className="py-10 space-y-4 divide-y-2">
         {Array(5)
           .fill("")
           .map((_, index) => (
@@ -15,9 +16,9 @@ export default function Live() {
               </h3>
             </div>
           ))}
-        <button className="fixed bottom-24 right-10 bg-orange-500 text-white transition-colors cursor-pointer shadow-xl p-4 border-transparent rounded-full hover:bg-orange-600">
+        <CircleButton className="fixed bottom-24 right-10">
           <VideoIcon className="w-7 h-7" />
-        </button>
+        </CircleButton>
       </div>
     </Layout>
   );

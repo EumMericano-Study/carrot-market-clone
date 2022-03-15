@@ -1,3 +1,4 @@
+import CircleButton from "../../components/buttons/circleButton";
 import {
   CartIcon,
   HeartIcon,
@@ -21,25 +22,25 @@ export default function Profile() {
         </div>
         <div className="flex justify-around mt-10">
           <div className="flex items-center flex-col">
-            <div className="w-14 h-14 flex justify-center items-center bg-orange-500 text-white rounded-full">
+            <CircleButton>
               <CartIcon />
-            </div>
+            </CircleButton>
             <span className="text-sm font-medium text-gray-700 mt-2">
               판매 내역
             </span>
           </div>
           <div className="flex items-center flex-col">
-            <div className="w-14 h-14 flex justify-center items-center bg-orange-500 text-white rounded-full">
+            <CircleButton>
               <ShoppingIcon />
-            </div>
+            </CircleButton>
             <span className="text-sm font-medium text-gray-700 mt-2">
               구매 내역
             </span>
           </div>
           <div className="flex items-center flex-col">
-            <div className="w-14 h-14 flex justify-center items-center bg-orange-500 text-white rounded-full">
+            <CircleButton>
               <HeartIcon className="w-6 h-6" />
-            </div>
+            </CircleButton>
             <span className="text-sm font-medium text-gray-700 mt-2">
               관심 목록
             </span>

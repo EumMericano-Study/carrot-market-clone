@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import CircleButton from "../components/buttons/circleButton";
 import { HeartIcon, ChatBubbleIcon, PlusIcon } from "../components/icons";
 import Layout from "../components/layout";
 
@@ -35,9 +36,9 @@ const Home: NextPage = () => {
               </div>
             </div>
           ))}
-        <button className="fixed bottom-24 right-10 bg-orange-500 text-white transition-colors cursor-pointer shadow-xl p-4 border-transparent  rounded-full hover:bg-orange-600">
+        <CircleButton className="fixed bottom-24 right-10">
           <PlusIcon className="w-7 h-7" />
-        </button>
+        </CircleButton>
       </div>
     </Layout>
   );
