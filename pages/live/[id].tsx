@@ -1,4 +1,3 @@
-import { VideoIcon } from "../../components/icons";
 import Layout from "../../components/layout";
 
 export default function LiveDetail() {
