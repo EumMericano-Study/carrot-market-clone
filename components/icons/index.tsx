@@ -12,6 +12,8 @@ export { default as ShoppingIcon } from "./shopping";
 export { default as StarIcon } from "./star";
 
 export { default as HomeIcon } from "./home";
+export { default as NewsIcon } from "./news";
+export { default as UserIcon } from "./user";
 
 export { default as GithubIcon } from "./github";
 export { default as TwitterIcon } from "./twitter";
