@@ -15,5 +15,7 @@ export { default as HomeIcon } from "./home";
 export { default as NewsIcon } from "./news";
 export { default as UserIcon } from "./user";
 
+export { ChevronLeft as ChevronLeftIcon } from "./chevron";
+
 export { default as GithubIcon } from "./github";
 export { default as TwitterIcon } from "./twitter";
