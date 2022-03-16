@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CircleButton } from "../../components/buttons";
 import {
   CartIcon,
@@ -15,36 +16,46 @@ export default function Profile() {
           <div className="w-16 h-16 bg-slate-300 rounded-full" />
           <div className="flex flex-col">
             <p className="font-medium text-gray-900">Steve Jobs</p>
-            <p className="text-sm font-medium text-gray-700">
-              View profile &rarr;
-            </p>
+            <Link href="/profile/edit">
+              <a>
+                <p className="text-sm font-medium text-gray-700">
+                  View profile &rarr;
+                </p>
+              </a>
+            </Link>
           </div>
         </div>
         <div className="flex justify-around mt-10">
-          <div className="flex items-center flex-col">
-            <CircleButton>
-              <CartIcon />
-            </CircleButton>
-            <span className="text-sm font-medium text-gray-700 mt-2">
-              판매 내역
-            </span>
-          </div>
-          <div className="flex items-center flex-col">
-            <CircleButton>
-              <ShoppingIcon />
-            </CircleButton>
-            <span className="text-sm font-medium text-gray-700 mt-2">
-              구매 내역
-            </span>
-          </div>
-          <div className="flex items-center flex-col">
-            <CircleButton>
-              <HeartIcon className="w-6 h-6" />
-            </CircleButton>
-            <span className="text-sm font-medium text-gray-700 mt-2">
-              관심 목록
-            </span>
-          </div>
+          <Link href="profile/sold">
+            <a className="flex items-center flex-col">
+              <CircleButton>
+                <CartIcon />
+              </CircleButton>
+              <span className="text-sm font-medium text-gray-700 mt-2">
+                판매 내역
+              </span>
+            </a>
+          </Link>
+          <Link href="profile/bought">
+            <a className="flex items-center flex-col">
+              <CircleButton>
+                <ShoppingIcon />
+              </CircleButton>
+              <span className="text-sm font-medium text-gray-700 mt-2">
+                구매 내역
+              </span>
+            </a>
+          </Link>
+          <Link href="profile/loved">
+            <a className="flex items-center flex-col">
+              <CircleButton>
+                <HeartIcon className="w-6 h-6" />
+              </CircleButton>
+              <span className="text-sm font-medium text-gray-700 mt-2">
+                관심 목록
+              </span>
+            </a>
+          </Link>
         </div>
         <div className="mt-12">
           <div className="flex items-center space-x-4">

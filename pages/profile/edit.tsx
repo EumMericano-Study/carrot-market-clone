@@ -1,4 +1,5 @@
 import Layout from "../../components/layout";
+import { BoxButton } from "../../components/buttons";
 
 export default function EditProfile() {
   return (
@@ -46,9 +47,7 @@ export default function EditProfile() {
             />
           </div>
         </div>
-        <button className="w-full bg-orange-500 text-white text-sm font-medium shadow-sm transition px-4 py-2 mt-5 border border-transparent rounded-md hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">
-          Upload profile
-        </button>
+        <BoxButton className="w-full">Upload profile</BoxButton>
       </div>
     </Layout>
   );
