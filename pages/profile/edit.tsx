@@ -1,5 +1,6 @@
 import Layout from "../../components/layout";
 import { BoxButton } from "../../components/buttons";
+import Input from "../../components/input";
 
 export default function EditProfile() {
   return (
@@ -21,31 +22,10 @@ export default function EditProfile() {
           </label>
         </div>
         <div className="space-y-1">
-          <label htmlFor="email" className="text-sm text-gray-700 font-medium">
-            Email address
-          </label>
-          <input
-            id="email"
-            type="email"
-            required
-            className="appearance-none w-full shadow-sm placeholder-gray-400 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
-          />
+          <Input kind="text" type="email" label="Email address" name="email" />
         </div>
         <div className="space-y-1">
-          <label htmlFor="phone" className="text-sm text-gray-700 font-medium">
-            Phone number
-          </label>
-          <div className="flex shadow-sm rounded-md">
-            <span className="flex justify-center items-center bg-gray-50 text-sm text-gray-500 select-none px-3 border border-r-0 border-gray-300 rounded-l-md">
-              +82
-            </span>
-            <input
-              id="phone"
-              type="number"
-              required
-              className="appearance-none w-full shadow-sm placeholder-gray-400 px-3 py-2 border border-gray-300 rounded-md rounded-l-none focus:outline-none focus:ring-orange-500 focus:border-orange-500"
-            />
-          </div>
+          <Input kind="phone" type="number" label="Phone number" name="phone" />
         </div>
         <BoxButton className="w-full">Upload profile</BoxButton>
       </div>

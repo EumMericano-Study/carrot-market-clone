@@ -1,4 +1,5 @@
 import { BoxButton } from "../../components/buttons";
+import Input from "../../components/input";
 import Layout from "../../components/layout";
 
 export default function LiveCreate() {
@@ -6,41 +7,10 @@ export default function LiveCreate() {
     <Layout canGoBack>
       <div className="px-4 space-y-5">
         <div>
-          <label
-            htmlFor="name"
-            className="block text-sm text-gray-700 font-medium mb-1"
-          >
-            Name
-          </label>
-          <div className="relative flex items-center shadow-sm rounded-md">
-            <input
-              id="name"
-              type="text"
-              className="appearance-none w-full shadow-sm placeholder-gray-400 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
-            />
-          </div>
+          <Input label="Name" name="name" kind="text" />
         </div>
         <div>
-          <label
-            htmlFor="price"
-            className="block text-sm text-gray-700 font-medium mb-1"
-          >
-            Price
-          </label>
-          <div className="relative flex items-center shadow-sm rounded-md">
-            <div className="absolute left-0 flex justify-center items-center pointer-events-none pl-3">
-              <span className="text-sm text-gray-500">$</span>
-            </div>
-            <input
-              id="price"
-              type="text"
-              placeholder="0.00"
-              className="appearance-none w-full shadow-sm placeholder-gray-400 px-3 py-2 pl-7 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
-            />
-            <div className="absolute right-0 flex justify-center items-center pointer-events-none pr-3">
-              <span className="text-gray-500">USD</span>
-            </div>
-          </div>
+          <Input label="Price" name="price" kind="price" />
         </div>
         <div>
           <label

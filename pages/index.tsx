@@ -36,9 +36,13 @@ const Home: NextPage = () => {
               </a>
             </Link>
           ))}
-        <CircleButton className="fixed bottom-24 right-10">
-          <PlusIcon className="w-7 h-7" />
-        </CircleButton>
+        <Link href="items/upload">
+          <a>
+            <CircleButton className="fixed bottom-24 right-10">
+              <PlusIcon className="w-7 h-7" />
+            </CircleButton>
+          </a>
+        </Link>
       </div>
     </Layout>
   );
