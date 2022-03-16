@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BoxButton } from "../components/buttons";
 import { GithubIcon, TwitterIcon } from "../components/icons";
 import { cls } from "../libs/utils";
 
@@ -65,10 +66,10 @@ export default function Enter() {
               </div>
             )}
           </div>
-          <button className="bg-orange-500 text-white text-sm font-medium shadow-sm transition px-4 py-2 mt-5 border border-transparent rounded-md hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">
+          <BoxButton>
             {method === "email" && "Get login link"}
             {method === "phone" && "Get one-time password"}
-          </button>
+          </BoxButton>
         </form>
         <div className="mt-8">
           <div className="relative">

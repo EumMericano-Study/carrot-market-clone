@@ -1,3 +1,4 @@
+import { BoxButton } from "../../components/buttons";
 import { HeartIcon } from "../../components/icons";
 import Layout from "../../components/layout";
 
@@ -29,9 +30,7 @@ export default function ItemDetail() {
               repudiandae error dolorem!
             </p>
             <div className="flex justify-between items-center space-x-2">
-              <button className="flex-1 bg-orange-500 font-medium text-white py-3 rounded-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
-                Talk to seller
-              </button>
+              <BoxButton className="flex-1 py-3 mt-0">Talk to seller</BoxButton>
               <button className="flex justify-center items-center text-gray-400 p-3 rounded-md hover:bg-gray-100 hover:text-gray-500">
                 <HeartIcon className="w-6 h-6" />
               </button>
