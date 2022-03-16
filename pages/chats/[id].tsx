@@ -1,27 +1,13 @@
+import ChatMessage from "../../components/chatMessage";
 import Layout from "../../components/layout";
 
 export default function ChatDetail() {
   return (
     <Layout canGoBack>
       <div className="px-4 space-y-4 ">
-        <div className="flex items-start space-x-2">
-          <div className="w-8 h-8 bg-slate-400 rounded-full" />
-          <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-            <p>Hi, How much are you selling them for?</p>
-          </div>
-        </div>
-        <div className="flex items-start flex-row-reverse space-x-2 space-x-reverse">
-          <div className="w-8 h-8 bg-slate-400 rounded-full" />
-          <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-            <p>I want ￦20,000</p>
-          </div>
-        </div>
-        <div className="flex items-start space-x-2">
-          <div className="w-8 h-8 bg-slate-400 rounded-full" />
-          <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-            <p>미쳤어</p>
-          </div>
-        </div>
+        <ChatMessage message="얼마에 파시나요?" />
+        <ChatMessage message="20000원이요" reversed />
+        <ChatMessage message="미쳤어" />
         <div className="w-full max-w-md fixed bottom-2 inset-x-0 mx-auto">
           <div className="relative flex items-center">
             <input

@@ -1,3 +1,4 @@
+import ChatMessage from "../../components/chatMessage";
 import Layout from "../../components/layout";
 
 export default function LiveDetail() {
@@ -9,114 +10,22 @@ export default function LiveDetail() {
           Hey, you can really dance?
         </h3>
         <div className="h-[50vh] overflow-y-scroll px-4 py-10 pb-16 space-y-4">
-          <div className="flex items-start space-x-2">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>미쳤어</p>
-            </div>
-          </div>
-          <div className="flex items-start flex-row-reverse space-x-2 space-x-reverse">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>I want ￦20,000</p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-2">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>미쳤어</p>
-            </div>
-          </div>
-          <div className="flex items-start flex-row-reverse space-x-2 space-x-reverse">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>I want ￦20,000</p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-2">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>미쳤어</p>
-            </div>
-          </div>
-          <div className="flex items-start flex-row-reverse space-x-2 space-x-reverse">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>I want ￦20,000</p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-2">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>미쳤어</p>
-            </div>
-          </div>
-          <div className="flex items-start flex-row-reverse space-x-2 space-x-reverse">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>I want ￦20,000</p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-2">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>미쳤어</p>
-            </div>
-          </div>
-          <div className="flex items-start flex-row-reverse space-x-2 space-x-reverse">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>I want ￦20,000</p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-2">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>미쳤어</p>
-            </div>
-          </div>
-          <div className="flex items-start flex-row-reverse space-x-2 space-x-reverse">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>I want ￦20,000</p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-2">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>미쳤어</p>
-            </div>
-          </div>
-          <div className="flex items-start flex-row-reverse space-x-2 space-x-reverse">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>I want ￦20,000</p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-2">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>미쳤어</p>
-            </div>
-          </div>
-          <div className="flex items-start flex-row-reverse space-x-2 space-x-reverse">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>I want ￦20,000</p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-2">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>미쳤어</p>
-            </div>
-          </div>
-          <div className="flex items-start flex-row-reverse space-x-2 space-x-reverse">
-            <div className="w-8 h-8 bg-slate-400 rounded-full" />
-            <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">
-              <p>I want ￦20,000</p>
-            </div>
-          </div>
+          <ChatMessage message="얼마에 파시나요?" />
+          <ChatMessage message="안파는데요?" reversed />
+          <ChatMessage message="얼마에 파시나요?" />
+          <ChatMessage message="안판다니까요?" reversed />
+          <ChatMessage message="얼마에 파시나요?" />
+          <ChatMessage message="안파는데요?" reversed />
+          <ChatMessage message="얼마에 파시나요?" />
+          <ChatMessage message="안판다니까요?" reversed />
+          <ChatMessage message="얼마에 파시나요?" />
+          <ChatMessage message="안파는데요?" reversed />
+          <ChatMessage message="얼마에 파시나요?" />
+          <ChatMessage message="안판다니까요?" reversed />
+          <ChatMessage message="얼마에 파시나요?" />
+          <ChatMessage message="안파는데요?" reversed />
+          <ChatMessage message="얼마에 파시나요?" />
+          <ChatMessage message="안판다니까요?" reversed />
         </div>
         <div className="w-full max-w-md fixed bottom-2 inset-x-0 mx-auto">
           <div className="relative flex items-center">
