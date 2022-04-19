@@ -5,6 +5,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  await client.user.create({ data: { email: "hey", name: "hey" } });
+  await client.user.create({ data: { email: "sfe", name: "hey" } });
   res.json({ ok: true });
 }
