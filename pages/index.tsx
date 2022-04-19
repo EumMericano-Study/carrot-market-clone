@@ -14,6 +14,7 @@ const Home: NextPage = () => {
           .map((_, index) => (
             <Item
               id={index}
+              key={index}
               title="New Iphone 14"
               price={1600000}
               likes={10}
