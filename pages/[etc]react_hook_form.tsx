@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FieldErrors, useForm } from "react-hook-form";
 
 // react hook form
@@ -18,7 +18,11 @@ const UsingUseFormHook = () => {
     register,
     watch,
     handleSubmit,
+    setValue,
+    setError,
     formState: { errors },
+    reset,
+    resetField,
   } = useForm<LoginForm>({ mode: "all" });
   //mode를 통해 언제 에러를 보여줄 것 인지 설정할 수 있다.
   /**
@@ -38,10 +42,27 @@ const UsingUseFormHook = () => {
    * 두 번째 인자는 submit이 invalidate 되었을 떄 실행되는 항목이다.
    */
 
-  const onValid = (data: LoginForm) => {
-    alert(confirm("onValid"));
+  const checkUsernameDuplicated = (username: string) => {
+    // if (watch("username") === "eumericano") {
+    if (username === "eumericano") {
+      setError("username", { message: "이미 등록된 이름입니다." });
+      setTimeout(() => {
+        resetField("username");
+      }, 5000);
+      return true;
+    }
+    return false;
   };
-  console.log(errors);
+  const onValid = (data: LoginForm) => {
+    if (checkUsernameDuplicated(data.username)) return;
+    alert(confirm("onValid"));
+    reset();
+  };
+  useEffect(() => {
+    setValue("username", "저장되어 있는 이름");
+    setValue("email", "저장되어 있는 이메일");
+  }, []);
+
   return (
     <form onSubmit={handleSubmit(onValid)}>
       <div>
