@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// React hook form 공부
+// 기본 form
 const BasicForm = () => {
   const [username, setUsername] = useState<string>("");
   const [email, setEmail] = useState<string>("");
