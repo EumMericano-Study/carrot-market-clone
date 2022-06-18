@@ -14,7 +14,13 @@ interface LoginForm {
 }
 
 const UsingUseFormHook = () => {
-  const { register, watch, handleSubmit } = useForm<LoginForm>();
+  const {
+    register,
+    watch,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginForm>({ mode: "all" });
+  //mode를 통해 언제 에러를 보여줄 것 인지 설정할 수 있다.
   /**
    * resgiter('name') 을 출력해보면
    * name, onBlur, onChange, ref 항목을 담고 있다.
@@ -35,35 +41,50 @@ const UsingUseFormHook = () => {
   const onValid = (data: LoginForm) => {
     alert(confirm("onValid"));
   };
-  const onInvalid = (errors: FieldErrors) => {
-    console.log(errors);
-  };
+  console.log(errors);
   return (
-    <form onSubmit={handleSubmit(onValid, onInvalid)}>
-      <input
-        {...register("username", {
-          required: "username은 필수정보 입니다.",
-          // reqired: true로 어떤 오류가 있는지 체크한 후 출력도 가능하지만
-          // string 형태로 에러가 true일때 보여줄 message를 함께 출력 할 수 있다.
-          minLength: {
-            message: "username은 5글자 보다 길어야 합니다.",
-            value: 5,
-          },
-          // 숫자 값만 가능한 length valid값을 객체를 통해 메시지까지 전송할 수 있다.
-        })}
-        type="text"
-        placeholder="Username"
-      />
-      <input
-        {...register("email", { required: "이메일은 필수정보 입니다." })}
-        type="email"
-        placeholder="Email"
-      />
-      <input
-        {...register("password", { required: "비밀번호는 필수정보 입니다." })}
-        type="password"
-        placeholder="Password"
-      />
+    <form onSubmit={handleSubmit(onValid)}>
+      <div>
+        <input
+          {...register("username", {
+            required: "username은 필수정보 입니다.",
+            // reqired: true로 어떤 오류가 있는지 체크한 후 출력도 가능하지만
+            // string 형태로 에러가 true일때 보여줄 message를 함께 출력 할 수 있다.
+            minLength: {
+              message: "username은 5글자 보다 길어야 합니다.",
+              value: 5,
+            },
+            // 숫자 값만 가능한 length valid값을 객체를 통해 메시지까지 전송할 수 있다.
+          })}
+          type="text"
+          placeholder="Username"
+          className={Boolean(errors?.username) ? "border border-red-500" : ""}
+        />
+        <span>{errors?.username?.message}</span>
+      </div>
+      <div>
+        <input
+          {...register("email", {
+            required: "이메일은 필수정보 입니다.",
+            validate: {
+              notYahoo: (value) =>
+                !value.includes("@yahoo.co.kr") || "yahoo는 등록할 수 없습니다",
+              // &&, || 유의해서 사용할 것
+            },
+          })}
+          type="email"
+          placeholder="Email"
+        />
+        <span>{errors?.email?.message}</span>
+      </div>
+      <div>
+        <input
+          {...register("password", { required: "비밀번호는 필수정보 입니다." })}
+          type="password"
+          placeholder="Password"
+        />
+        <span>{errors?.password?.message}</span>
+      </div>
       <input type="submit" value="제출 하기" />
     </form>
   );
