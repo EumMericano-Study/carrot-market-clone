@@ -1,13 +1,29 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { BoxButton } from "../components/buttons";
 import { GithubIcon, TwitterIcon } from "../components/icons";
 import Input from "../components/input";
 import { cls } from "../libs/utils";
 
+interface EnterForm {
+  email?: string;
+  phone?: string;
+}
+
 export default function Enter() {
+  const { register, handleSubmit, reset } = useForm<EnterForm>();
   const [method, setMethod] = useState<"email" | "phone">("email");
-  const setToEmail = () => setMethod("email");
-  const setToPhone = () => setMethod("phone");
+  const setToEmail = () => {
+    reset();
+    setMethod("email");
+  };
+  const setToPhone = () => {
+    reset();
+    setMethod("phone");
+  };
+  const onValid = (data: EnterForm) => {
+    console.log(data);
+  };
   return (
     <div className="px-4 mt-16">
       <h3 className="text-3xl font-bold text-center">Enter to Carrot</h3>
@@ -39,10 +55,11 @@ export default function Enter() {
             </button>
           </div>
         </div>
-        <form className="flex flex-col mt-8">
+        <form className="flex flex-col mt-8" onSubmit={handleSubmit(onValid)}>
           {method === "email" && (
             <Input
-              reqired
+              register={register("email")}
+              reqired="true"
               type="email"
               label={method}
               name={method}
@@ -51,7 +68,8 @@ export default function Enter() {
           )}
           {method === "phone" && (
             <Input
-              reqired
+              register={register("phone")}
+              reqired="true"
               type="number"
               label={method}
               name={method}

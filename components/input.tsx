@@ -5,7 +5,13 @@ interface Props {
   [key: string]: any;
 }
 
-export default function Input({ label, name, kind = "text", ...rest }: Props) {
+export default function Input({
+  label,
+  name,
+  kind = "text",
+  register,
+  ...rest
+}: Props) {
   return (
     <div>
       <label htmlFor={name} className="text-sm text-gray-700 font-medium mb-1">
@@ -14,6 +20,7 @@ export default function Input({ label, name, kind = "text", ...rest }: Props) {
       {kind === "text" && (
         <input
           id={name}
+          {...register}
           {...rest}
           className="appearance-none w-full shadow-sm placeholder-gray-400 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
         />
@@ -25,6 +32,7 @@ export default function Input({ label, name, kind = "text", ...rest }: Props) {
           </span>
           <input
             id={name}
+            {...register}
             {...rest}
             className="appearance-none w-full shadow-sm placeholder-gray-400 px-3 py-2 border border-gray-300 rounded-md rounded-l-none focus:outline-none focus:ring-orange-500 focus:border-orange-500"
           />
