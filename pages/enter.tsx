@@ -58,9 +58,9 @@ export default function Enter() {
         <form className="flex flex-col mt-8" onSubmit={handleSubmit(onValid)}>
           {method === "email" && (
             <Input
-              register={register("email")}
-              reqired="true"
+              register={register("email", { required: true })}
               type="email"
+              required={true}
               label={method}
               name={method}
               kind="text"
@@ -68,9 +68,9 @@ export default function Enter() {
           )}
           {method === "phone" && (
             <Input
-              register={register("phone")}
-              reqired="true"
+              register={register("phone", { required: true })}
               type="number"
+              required={true}
               label={method}
               name={method}
               kind="phone"
