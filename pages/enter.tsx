@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { BoxButton } from "../components/buttons";
 import { GithubIcon, TwitterIcon } from "../components/icons";
 import Input from "../components/input";
+import useMutation from "../libs/client/useMuataion";
 import { cls } from "../libs/client/utils";
 
 interface EnterForm {
@@ -11,6 +12,7 @@ interface EnterForm {
 }
 
 export default function Enter() {
+  const [enter, { loading, data, enter }] = useMutation("/api/users/enter");
   const { register, handleSubmit, reset } = useForm<EnterForm>();
   const [method, setMethod] = useState<"email" | "phone">("email");
   const setToEmail = () => {
@@ -22,13 +24,7 @@ export default function Enter() {
     setMethod("phone");
   };
   const onValid = (data: EnterForm) => {
-    fetch("/api/users/enter", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    enter(data);
   };
   return (
     <div className="px-4 mt-16">
