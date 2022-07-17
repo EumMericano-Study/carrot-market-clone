@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { BoxButton } from "../components/buttons";
 import { GithubIcon, TwitterIcon } from "../components/icons";
 import Input from "../components/input";
-import { cls } from "../libs/utils";
+import { cls } from "../libs/client/utils";
 
 interface EnterForm {
   email?: string;
@@ -22,7 +22,13 @@ export default function Enter() {
     setMethod("phone");
   };
   const onValid = (data: EnterForm) => {
-    console.log(data);
+    fetch("/api/users/enter", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   };
   return (
     <div className="px-4 mt-16">
